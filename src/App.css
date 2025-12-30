@@ -1,42 +1,211 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* =========================================
+   1. FONTS & IMPORTS
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* =========================================
+   2. GLOBAL RESETS & BODY
+   ========================================= */
+html {
+  background-color: #001f3d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  /* Default font fallback */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Helper Class */
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* =========================================
+   3. HEADER STYLING
+   ========================================= */
+header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  background-color: #01264d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+header img {
+  width: 60px;
+  height: 81px;
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 28px;
+  font-style: italic;
+  text-shadow: 2px 0px 2px rgb(4, 4, 4);
+  text-decoration: none;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: rgb(180, 178, 178);
+}
+
+.belowheader {
+  background-color: #001f3d;
+  height: 30px;
+  position: sticky;
+}
+
+/* =========================================
+   4. FOOTER STYLING
+   ========================================= */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #001f3d;
+  color: white;
+  gap: 100px;
+  padding-right: 70px;
+}
+
+.footer-column {
+  max-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-column a {
+  color: #cccccc;
+  margin-bottom: 10px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.footer-column p,
+.footer-column span {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   5. MOBILE / RESPONSIVE HEADER
+   (Required for the hamburger menu to work)
+   ========================================= */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: space-between;
+    gap: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .menu-toggle {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  /* Dropdown menu styling */
+  nav {
+    display: none; /* Hide nav links by default on mobile */
+    position: absolute;
+    top: 150px; /* Pushes it below the header-content + belowheader */
+    left: 0;
+    width: 100%;
+    background-color: #01264d;
+    flex-direction: column;
+    margin-left: 0;
+    gap: 0;
+    border-bottom: 3px solid #001f3d;
+  }
+
+  /* This class is added by React when state isMenuOpen is true */
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 22px;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    text-shadow: none;
+    border-bottom: 1px solid #001f3d;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  nav a:hover {
+    background-color: #001f3d;
+    color: white;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    padding-right: 20px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (min-width: 769px) and (max-width: 1300px) {
+  .header-content {
+    gap: 40px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  nav {
+    margin-left: 20px;
+    gap: 20px;
+  }
 
-.read-the-docs {
-  color: #888;
+  footer {
+    gap: 50px;
+    padding-right: 20px;
+    justify-content: space-around;
+  }
 }

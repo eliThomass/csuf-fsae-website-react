@@ -1,0 +1,204 @@
+/* =========================================
+   1. SLIDESHOW SECTION
+   ========================================= */
+#slideshow {
+    display: flex;
+    height: 810px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+    /* Stack all slides on top of each other */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Make slides invisible by default */
+    opacity: 0;
+
+    /* Set the base z-index for inactive slides */
+    z-index: 0;
+
+    /* Any change to opacity takes two seconds */
+    transition: opacity 2s ease-in-out;
+}
+
+.active-slide {
+    /* Make the active slide visible */
+    opacity: 1;
+
+    /* Bring the active slide to the front */
+    z-index: 1;
+}
+
+.slidetext {
+    margin-left: 260px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+    text-shadow: 4px 2px 2px rgb(4, 4, 4);
+    z-index: 9;
+    position: relative;
+}
+
+/*  ABOUT US & TEAM SECTION */
+
+.fading-orange-linear {
+    background: linear-gradient(to top, orange, rgba(255, 165, 0, 0));
+    height: 100%;
+    width: 100%;
+}
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    background-color: #01264d;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+#aboutustext {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 45px;
+    text-shadow: 4px 2px 2px rgb(4, 4, 4);
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.team {
+    height: 490px;
+    width: 1100px;
+    scale: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 25px;
+
+    background-image: url('/assets/images/index/2025team1grad.png');
+    background-size: cover;
+    background-position: center -180px;
+    border-radius: 8px;
+}
+
+.teamdesc {
+    width: 68%;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+}
+
+/* =========================================
+   3. SHOWCASE VIDEOS
+   ========================================= */
+.showcasevideos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.scwrapper {
+    width: 450px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.scvid {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* =========================================
+   4. RESPONSIVE / MEDIA QUERIES
+   ========================================= */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    
+    .showcasevideos {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .scwrapper {
+        width: 90%;
+        max-width: 450px;
+        height: auto;
+    }
+
+    .slidetext {
+        margin-left: 0;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .team {
+        display: block;
+        width: 95%;
+        height: auto;
+        scale: 1;
+        background-image: none;
+        padding: 0;
+    }
+
+    .team::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-image: url('/assets/images/index/2025team1grad.png');
+        background-size: cover;
+        background-position: center center;
+        border-radius: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .teamdesc {
+        width: 90%;
+        font-size: 18px;
+        margin: 10px auto 0 auto;
+    }
+}
+
+/* Tablet / Small Desktop */
+@media (min-width: 769px) and (max-width: 1300px) {
+    .team {
+        width: 95%;
+        background-position: center center;
+        scale: 1;
+    }
+
+    .teamdesc {
+        width: 80%;
+    }
+
+    .showcasevideos {
+        flex-wrap: wrap;
+        width: 95%;
+    }
+
+    .slidetext {
+        margin-left: 5%;
+        font-size: 50px;
+    }
+}
