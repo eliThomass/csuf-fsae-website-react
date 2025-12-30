@@ -1,14 +1,19 @@
-/* =========================================
-   1. FONTS & IMPORTS
-   ========================================= */
+/* FONTS & IMPORTS */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* =========================================
-   2. GLOBAL RESETS & BODY
-   ========================================= */
+/* GLOBAL RESETS & BODY */
+
 html {
   background-color: #001f3d;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; 
 }
 
 body {
@@ -28,9 +33,8 @@ body {
   font-style: normal;
 }
 
-/* =========================================
-   3. HEADER STYLING
-   ========================================= */
+/* HEADER STYLING */
+
 header {
   display: flex;
   flex-direction: column;
@@ -81,9 +85,7 @@ nav a:hover {
   position: sticky;
 }
 
-/* =========================================
-   4. FOOTER STYLING
-   ========================================= */
+/* FOOTER STYLING */
 footer {
   display: flex;
   justify-content: center;
@@ -122,12 +124,9 @@ footer {
   line-height: 1.6;
 }
 
-/* =========================================
-   5. MOBILE / RESPONSIVE HEADER
-   (Required for the hamburger menu to work)
-   ========================================= */
+/* MOBILE / RESPONSIVE HEADER */
 .menu-toggle {
-  display: none; /* Hidden on desktop */
+  display: none;
   background: none;
   border: none;
   color: white;
@@ -161,7 +160,6 @@ footer {
     border-bottom: 3px solid #001f3d;
   }
 
-  /* This class is added by React when state isMenuOpen is true */
   nav.show {
     display: flex;
   }

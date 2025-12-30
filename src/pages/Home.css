@@ -192,6 +192,10 @@
         width: 80%;
     }
 
+    #aboutustext {
+        margin-bottom: 10px;
+    }
+
     .showcasevideos {
         flex-wrap: wrap;
         width: 95%;

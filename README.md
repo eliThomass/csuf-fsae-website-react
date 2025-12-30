@@ -1,16 +1,67 @@
-# React + Vite
+# Cal State Fullerton's Formula SAE Website
+## Titan Racing
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official code repository for the California State University Fullerton FSAE team website. This site serves as a main information hub for members, potential recruits, and sponsors.
 
-Currently, two official plugins are available:
+**View the live site: https://www.csuftitanracing.com/**
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Preview of the Main Page (Desktop)
+![Main Page of Titan Racing (Desktop)](./assets/mainpage.png)
+## Preview of the Main Page (Mobile)
+![Main Page of Titan Racing (Mobile)](./assets/mainmobile.png)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+The website is a static site built with HTML, CSS, and JavaScript. It includes the following pages:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Home:** Main landing page with an "About Us" section.
+* **Subteams:** Details on the different engineering subteams (e.g., Aerodynamics, Powertrain, Chassis).
+* **Join Us:** Information for prospective members on how to join.
+* **Our Team:** Meet the current team leads and leadership.
+* **Supporters:** A page to thank and list club sponsors.
+* **Gallery:** Photos and videos of the car over the years.
+
+---
+
+## 💻 Tech Stack
+
+* **React.js**
+* **HTML5**
+* **CSS3**
+* **JavaScript (ES6+)**
+
+---
+
+## How to Contribute
+
+If you want to help update the site (like adding new photos or updating the team roster), here’s how:
+
+1.  **Clone the Repository**
+    ```bash
+    git clone https://github.com/eliThomass/csuf-fsae-website-react.git
+    ```
+
+2.  **Open the Project**
+    Navigate into the folder and open it in your code editor (like VS Code).
+
+3.  **View Your Changes**
+    The easiest way to see your changes live is by using a tool like the **"Live Server"** extension in VS Code.
+    * Right-click the `index.html` file.
+    * Select "Open with Live Server".
+
+4.  **Make a Pull Request**
+    * Create a new branch for your changes: `git checkout -b your-feature-name`
+    * Commit your changes: `git commit -m "Add new photos to gallery"`
+    * Push to your branch: `git push origin your-feature-name`
+    * Open a **Pull Request** on GitHub and describe what you changed.
+
+---
+
+## Acknowledgments
+
+* Website built and maintained by @eliThomass.
+* Content provided by the California State University Fullerton FSAE team.
+
