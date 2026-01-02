@@ -15,7 +15,7 @@ function Subteams() {
 
       <div id="subteam-cards">
         
-        /* Powertrain */
+	{ /* Powertrain */}
         <div 
           className="card" 
           style={{ backgroundImage: "url('/assets/images/subteam/powergrad.avif')" }}
