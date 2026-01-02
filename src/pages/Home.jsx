@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import '../App.css';
 import './Home.css';
+import { Helmet } from 'react-helmet-async';
 
 
 function Home() {
@@ -26,6 +27,10 @@ function Home() {
 
     return (
         <div className="home-container">
+	    <Helmet>
+       		 <title>Titan Racing | CSUF Formula SAE</title>
+       		 <meta name="description" content="Titan Racing is CSUF's official Formula SAE team. We are a student-led organization that designs, builds, and races a high-performance, open-wheel car." />
+     	     </Helmet>
             {/* Slideshow Section */}
             <div id="slideshow">
                 {slides.map((image, index) => (

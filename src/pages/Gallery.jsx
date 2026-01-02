@@ -1,8 +1,14 @@
 import './Gallery.css';
+import { Helmet } from 'react-helmet-async';
 
 function Gallery() {
   return (
     <div className="gallery-container">
+
+      <Helmet>
+        <title>Gallery | Titan Racing</title>
+        <meta name="description" content="Explore the Titan Racing photo and video gallery. See our CSUF Formula SAE car in action, as well as previous models." />
+      </Helmet>
       
       <div id="gallery-main-pic">
         <div className="slidegallery">

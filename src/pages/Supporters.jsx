@@ -1,8 +1,14 @@
 import './Supporters.css';
+import { Helmet } from 'react-helmet-async';
 
 function Supporters() {
   return (
     <div className="supporters-container">
+
+      <Helmet>
+        <title>Our Supporters | Titan Racing</title>
+        <meta name="description" content="Titan Racing is powered by our generous supporters. We thank the companies and individuals who sponsor our CSUF Formula SAE team." />
+      </Helmet>
       
       {/* Hero Section */}
       <div id="supporters-main-pic">

@@ -1,8 +1,14 @@
 import './OurTeam.css';
+import { Helmet } from 'react-helmet-async';
 
 function OurTeam() {
   return (
     <div className="ourteam-container">
+
+      <Helmet>
+        <title>Our Team | Titan Racing</title>
+        <meta name="description" content="Meet the dedicated students on the CSUF Formula SAE team. See the faces of our leadership, project managers, and members who bring the Titan Racing car to life." />
+      </Helmet>
       
       <div id="ourteam-main-pic">
         <div className="slideourteam">

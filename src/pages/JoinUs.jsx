@@ -1,4 +1,5 @@
 import './JoinUs.css';
+import { Helmet } from 'react-helmet-async';
 
 function JoinUs() {
   return (
@@ -6,6 +7,12 @@ function JoinUs() {
       
       {/* Hero Section */}
       <div id="joinus-main-pic">
+
+	<Helmet>
+          <title>Join Us | Titan Racing</title>
+          <meta name="description" content="Join the Titan Racing Formula SAE team! We're recruiting passionate CSUF students from all majors. No experience needed. Find out how to apply and get involved." />
+        </Helmet>
+
         <div 
           className="slidejoinus" 
           style={{ backgroundImage: "url('/assets/images/joinus/image.jpg')" }}

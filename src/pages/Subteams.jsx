@@ -1,8 +1,14 @@
 import './Subteams.css';
+import { Helmet } from 'react-helmet-async';
 
 function Subteams() {
   return (
     <div className="subteams-container">
+
+      <Helmet>
+        <title>Our Subteams | Titan Racing</title>
+        <meta name="description" content="Explore the core of Titan Racing. Learn how our Aerodynamics, Chassis, Powertrain, Vehicle Dynamics, and Electronics subteams work together to build a winning FSAE car at CSUF." />
+      </Helmet>
       
       <div id="subteam-main-pic">
         <div 

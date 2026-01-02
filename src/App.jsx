@@ -1,5 +1,6 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,6 +16,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-container">
+
+	<Helmet>
+          <title>Titan Racing | CSUF Formula SAE</title>
+          <meta name="description" content="Titan Racing is CSUF's official Formula SAE team. We are a student-led organization that designs, builds, and races a high-performance, open-wheel car." />
+        </Helmet>
 
         <Header />
 
@@ -33,7 +39,7 @@ function App() {
 
       </div>	
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;
