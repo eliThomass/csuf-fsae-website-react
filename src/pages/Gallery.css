@@ -45,16 +45,22 @@
     align-items: center;
     background-color: #01264d;
     padding-bottom: 60px;
+    min-height: 600px;
 }
 
-#gallery-years {
-    width: 100%;
+.gallery-controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 40px; 
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 900px;
 }
 
-#gallery-years h2 {
+.gallery-controls h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     color: white;
@@ -62,9 +68,28 @@
     font-style: italic;
     text-shadow: 4px 2px 2px rgb(4, 4, 4);
     text-align: center;
-    padding-left: 0;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin: 0;
+    width: 350px; 
+}
+
+.arrow-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 60px;
+    cursor: pointer;
+    padding: 0 20px;
+    transition: color 0.3s ease, transform 0.2s;
+    user-select: none;
+}
+
+.arrow-btn:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.arrow-btn:active {
+    transform: scale(0.95);
 }
 
 .yearimages {
@@ -75,16 +100,23 @@
     padding: 0 2%;
     width: 100%;
     box-sizing: border-box;
+    /* Optional: Simple fade in animation */
+    animation: fadeIn 0.5s ease-in-out; 
 }
 
-#gallery-years img {
-    /* Responsive sizing logic */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.yearimages img {
     min-width: 350px;
     width: auto;
     max-width: 100%;
-    height: 250px;     
-    object-fit: cover; 
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
 /* =========================================
@@ -92,15 +124,27 @@
    ========================================= */
 @media (max-width: 768px) {
 
-    .slidetextgallery {
+
+    .slidetext {
         margin-left: 0;
         text-align: center;
         font-size: 40px;
         justify-content: center;
     }
 
-    #gallery-years h2 {
+    .gallery-controls {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .gallery-controls h2 {
         font-size: 36px;
+        width: auto; /* Let it shrink on mobile */
+    }
+
+    .arrow-btn {
+        font-size: 40px;
+        padding: 0 10px;
     }
 
     .yearimages {
@@ -109,12 +153,20 @@
         gap: 20px;
     }
 
-    #gallery-years img {
+    .yearimages img {
         width: 90%;
         min-width: 0;
         height: 250px;
-        object-fit: cover;
     }
+
+    .slide {
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        zoom: 1;
+        background-size: cover;
+        background-position: center 30%;
+    }
+
 
     .slidegallery {
         background-repeat: no-repeat;
