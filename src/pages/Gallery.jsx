@@ -5,6 +5,21 @@ import { useState } from 'react';
 
 const galleryData = [
   {
+    year: "Titan IV",
+    images: [
+      { src: "/assets/images/gallery/iv3.avif", alt: "Titan IV car at campus" },
+      { src: "/assets/images/gallery/iv4.avif", alt: "Titan IV car at campus" },
+      { src: "/assets/images/gallery/iv.avif", alt: "Titan IV car at campus again" }
+    ]
+  },
+  {
+    year: "Titan VI",
+    images: [
+      { src: "/assets/images/gallery/vi3.avif", alt: "Titan VI car at competition" },
+      { src: "/assets/images/gallery/vi2.avif", alt: "Titan VI car at competition" } 
+    ]
+  },
+  {
     year: "Titan XII",
     images: [
       { src: "/assets/images/gallery/xii.avif", alt: "Titan XII car at competition" }
@@ -17,7 +32,7 @@ const galleryData = [
     ]
   },
   {
-    year: "Titan XVI",
+    year: "Titan XV",
     images: [
       { src: "/assets/images/gallery/XVI1.avif", alt: "Titan XVI car front facing" },
       { src: "/assets/images/gallery/xvi2.avif", alt: "Titan XVI car with team" },
