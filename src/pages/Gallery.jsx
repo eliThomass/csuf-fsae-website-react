@@ -2,45 +2,77 @@ import './Gallery.css';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 
+// Number 20 is 2013-2014
+// Number 45 is 2012-2013
+
+// Titan VI doesn't exist / never used. Could not find photos.
+//
+// Ignore filenames, they don't relate to the car year.
+// I had to move around the photos to try and match the year so filenames
+// don't mean much.
 
 const galleryData = [
   {
-    year: "Titan IV",
+    year: "Titan III", //
+    images: [
+      { src: "/assets/images/gallery/vi4.avif", alt: "Titan III with the team" }
+    ]
+  },
+    {
+    year: "Titan IV", // 2011-2012 (Confirmed Pictures)
     images: [
       { src: "/assets/images/gallery/iv3.avif", alt: "Titan IV car at campus" },
       { src: "/assets/images/gallery/iv4.avif", alt: "Titan IV car at campus" },
-      { src: "/assets/images/gallery/iv.avif", alt: "Titan IV car at campus again" }
+      { src: "/assets/images/gallery/iv.avif", alt: "Titan IV car at campus again" },
+      { src: "/assets/images/gallery/vi5.avif", alt: "Titan IV car at campus" },
     ]
   },
   {
-    year: "Titan VI",
+    year: "Titan V", // 2012-2013
     images: [
       { src: "/assets/images/gallery/vi3.avif", alt: "Titan VI car at competition" },
-      { src: "/assets/images/gallery/vi2.avif", alt: "Titan VI car at competition" } 
+      { src: "/assets/images/gallery/vi2.avif", alt: "Titan VI car at competition" },
     ]
-  },
+  }, 
   {
-    year: "Titan XII",
+    year: "Titan VII", // 2013-2014 (Confirmed, 2014 = VII)
     images: [
-      { src: "/assets/images/gallery/xii.avif", alt: "Titan XII car at competition" }
+      { src: "/assets/images/gallery/vii.avif", alt: "Titan VII car at competition" },
+      { src: "/assets/images/gallery/vii2.avif", alt: "Titan VII testing at a parking lot" },
     ]
   },
   {
-    year: "Titan XIII",
+    year: "Titan IX", // 2015-2016
     images: [
-      { src: "/assets/images/gallery/xiii.avif", alt: "Titan XIII car near the engineering building" }
+      { src: "/assets/images/gallery/ix.avif", alt: "Titan IX car at competition" },
+      { src: "/assets/images/gallery/ix2.avif", alt: "Titan IX in front of the trailer" }, 
+      { src: "/assets/images/gallery/ix3.avif", alt: "Titan IX from the backside"} 
     ]
   },
   {
-    year: "Titan XV",
+    year: "Titan XI", //
     images: [
-      { src: "/assets/images/gallery/XVI1.avif", alt: "Titan XVI car front facing" },
-      { src: "/assets/images/gallery/xvi2.avif", alt: "Titan XVI car with team" },
-      { src: "/assets/images/gallery/xvi3.avif", alt: "Titan XVI car at the front of the university" }
+      { src: "/assets/images/gallery/xii.avif", alt: "titan xi car at competition" }
     ]
   },
   {
-    year: "Titan XVII",
+    year: "Titan XII", // 2018-2019 (Confirmed, XII)
+    images: [
+      { src: "/assets/images/gallery/xiii.avif", alt: "Titan XII car near the engineering building" },
+      { src: "/assets/images/gallery/xii3.avif", alt: "Titan XII car after competition" },
+      { src: "/assets/images/gallery/xii42.avif", alt: "Titan XII car after competition" }
+    ]
+  },
+  {
+    year: "Titan XV", // 2022
+    images: [
+      { src: "/assets/images/gallery/XVI1.avif", alt: "Titan XV car front facing" },
+      { src: "/assets/images/gallery/xvi2.avif", alt: "Titan XV car with team" },
+      { src: "/assets/images/gallery/xvi3.avif", alt: "Titan XV car at the front of the university" }
+    ]
+  },
+  {
+    year: "Titan XVII", // 2024
     images: [
       { src: "/assets/images/gallery/titan XVII1.avif", alt: "Titan XVII car on campus" },
       { src: "/assets/images/gallery/xvii2.avif", alt: "Titan XVII car on track isometric" },
@@ -48,7 +80,7 @@ const galleryData = [
     ]
   },
   {
-    year: "Titan XVIII",
+    year: "Titan XVIII", // 2025
     images: [
       { src: "/assets/images/gallery/xviii1.avif", alt: "Titan XVIII car at career fair" },
       { src: "/assets/images/gallery/xviii2.avif", alt: "Titan XVIII car at competition" }
