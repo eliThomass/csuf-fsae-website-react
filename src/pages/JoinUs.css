@@ -62,7 +62,7 @@
     width: 45%;
     height: 500px;
     border-radius: 2px;
-    background-image: url('/assets/images/joinus/mxXD.avif');
+    background-image: url('/assets/images/joinus/schoolfront.avif');
     background-size: cover;
     background-position: center;
 }
@@ -130,7 +130,7 @@
 
     #welcomeimg {
         width: 90%;
-        background-image: url('/assets/images/joinus/joinus.jpeg');
+        background-image: url('/assets/images/joinus/joinuscrop.avif');
         align-items: flex-start;
         object-fit: cover;
         height: 400px;
