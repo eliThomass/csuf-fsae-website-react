@@ -89,7 +89,7 @@ const galleryData = [
 ];
 
 function Gallery() {
-    const [currentIndex, setCurrentIndex] = useState(6);
+    const [currentIndex, setCurrentIndex] = useState(9);
 
     const nextYear = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % galleryData.length);
