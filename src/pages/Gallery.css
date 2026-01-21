@@ -17,7 +17,6 @@
     background-position: center 28%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    /* Updated path for Vite */
     background-image: url('/assets/images/gallery/gallerymainnnnn.jpeg');
 }
 
@@ -29,7 +28,6 @@
     font-size: 60px;
     font-style: italic;
     text-shadow: 4px 2px 2px rgb(4, 4, 4);
-    /* Flex alignment added to center text vertically */
     display: flex;
     align-items: center;
 }
@@ -55,7 +53,6 @@
     justify-content: center;
     gap: 40px; 
     margin-top: 50px;
-    margin-bottom: 30px;
     width: 100%;
     max-width: 900px;
 }
@@ -100,7 +97,6 @@
     padding: 0 2%;
     width: 100%;
     box-sizing: border-box;
-    /* Optional: Simple fade in animation */
     animation: fadeIn 0.5s ease-in-out; 
 }
 
@@ -117,6 +113,17 @@
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.car-year {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: rgb(220,220,220);
+    font-size: 18px;
+    height: auto;
+    margin-top: -20px;
+    align-items: flex-start;
 }
 
 /* =========================================
@@ -139,7 +146,7 @@
 
     .gallery-controls h2 {
         font-size: 36px;
-        width: auto; /* Let it shrink on mobile */
+        width: auto;
     }
 
     .arrow-btn {
@@ -157,6 +164,10 @@
         width: 90%;
         min-width: 0;
         height: 250px;
+    }
+
+    .car-year {
+        font-size: 14px;
     }
 
     .slidegallery {
