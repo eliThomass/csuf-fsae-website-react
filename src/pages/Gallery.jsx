@@ -20,6 +20,7 @@ const galleryData = [
   },
     {
     year: "Titan IV", // 2011-2012 (Confirmed Pictures)
+    carYear: "2012",
     images: [
       { src: "/assets/images/gallery/iv3.avif", alt: "Titan IV car at campus" },
       { src: "/assets/images/gallery/iv4.avif", alt: "Titan IV car at campus" },
@@ -29,6 +30,7 @@ const galleryData = [
   },
   {
     year: "Titan V", // 2012-2013
+    carYear: "2013",
     images: [
       { src: "/assets/images/gallery/vi3.avif", alt: "Titan VI car at competition" },
       { src: "/assets/images/gallery/vi2.avif", alt: "Titan VI car at competition" },
@@ -36,6 +38,7 @@ const galleryData = [
   }, 
   {
     year: "Titan VII", // 2013-2014 (Confirmed, 2014 = VII)
+    carYear: "2014",
     images: [
       { src: "/assets/images/gallery/vii.avif", alt: "Titan VII car at competition" },
       { src: "/assets/images/gallery/vii2.avif", alt: "Titan VII testing at a parking lot" },
@@ -43,6 +46,7 @@ const galleryData = [
   },
   {
     year: "Titan IX", // 2015-2016
+    carYear: "2016",
     images: [
       { src: "/assets/images/gallery/ix.avif", alt: "Titan IX car at competition" },
       { src: "/assets/images/gallery/ix2.avif", alt: "Titan IX in front of the trailer" }, 
@@ -51,6 +55,7 @@ const galleryData = [
   },
   {
     year: "Titan XI", //
+    carYear: "2018",
     images: [
       { src: "/assets/images/gallery/xii.avif", alt: "titan xi car at competition" }
     ]

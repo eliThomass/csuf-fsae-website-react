@@ -27,12 +27,12 @@ function JoinUs() {
         
         {/* The Welcome Image acts as a container for the text */}
         <div id="welcomeimg">
+        </div>
           <p id="welcometext">
             Below you will find the links to join the team. The right link includes an onboarding guide hosted in Notion.
             After completing the interest form please feel free to reach out to any of the respective directors/leads
             for guidance and to keep them informed on your onboarding process!
           </p>
-        </div>
 
         {/* Action Buttons */}
         <div id="buttons">
