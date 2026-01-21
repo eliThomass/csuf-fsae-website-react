@@ -66,16 +66,24 @@ const galleryData = [
   {
     year: "Titan XV", // 2022
     images: [
-      { src: "/assets/images/gallery/XVI1.avif", alt: "Titan XV car front facing" },
-      { src: "/assets/images/gallery/xvi2.avif", alt: "Titan XV car with team" },
-      { src: "/assets/images/gallery/xvi3.avif", alt: "Titan XV car at the front of the university" }
+      { src: "/assets/images/gallery/XV1.avif", alt: "Titan XV car front facing" },
+      { src: "/assets/images/gallery/xv2.avif", alt: "Titan XV car with team" },
+      { src: "/assets/images/gallery/xv3.avif", alt: "Titan XV car at the front of the university" }
+    ]
+  },
+  {
+    year: "Titan XVI", // 2023
+    images: [
+      { src: "/assets/images/gallery/titan XVI1.avif", alt: "Titan XVII car on campus" },
+      { src: "/assets/images/gallery/xvi2.avif", alt: "Titan XVII car on track isometric" },
+      { src: "/assets/images/gallery/xvi3.avif", alt: "Titan XVII car on track far away shot" }
     ]
   },
   {
     year: "Titan XVII", // 2024
     images: [
-      { src: "/assets/images/gallery/titan XVII1.avif", alt: "Titan XVII car on campus" },
-      { src: "/assets/images/gallery/xvii2.avif", alt: "Titan XVII car on track isometric" },
+      { src: "/assets/images/gallery/xvii.avif", alt: "Titan XVII car racing past with a blur at comp" },
+      { src: "/assets/images/gallery/xvii2.avif", alt: "Titan XVII car in front of some grass" },
       { src: "/assets/images/gallery/xvii3.avif", alt: "Titan XVII car on track far away shot" }
     ]
   },
@@ -83,7 +91,10 @@ const galleryData = [
     year: "Titan XVIII", // 2025
     images: [
       { src: "/assets/images/gallery/xviii1.avif", alt: "Titan XVIII car at career fair" },
-      { src: "/assets/images/gallery/xviii2.avif", alt: "Titan XVIII car at competition" }
+      { src: "/assets/images/gallery/xviii2.avif", alt: "Titan XVIII car at competition" },
+      { src: "/assets/images/gallery/xviii3.avif", alt: "Titan XVIII car after competition with the driver" },
+      { src: "/assets/images/gallery/xviii4.avif", alt: "Titan XVIII car rolling out" },
+      { src: "/assets/images/gallery/xviii5.avif", alt: "Titan XVIII car at comp" },
     ]
   }
 ];
@@ -128,6 +139,9 @@ function Gallery() {
             &#10095; {/* Right Arrow Character */}
           </button>
         </div>
+
+      <div> {/* Put info for the car year here (2025, 2024, etc.)*/}
+      </div>
 
         {/* Dynamic Image Grid */}
         <div className="yearimages" key={currentIndex}> 
